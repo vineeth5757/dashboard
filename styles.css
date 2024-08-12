@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.plant-image img {
+    width: 300px;
+	padding-right: 300px;
+}
+
+.sensors {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 20px;
+}
+
+.sensor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sensor img {
+    width: 60px;
+}
+
+canvas {
+    width: 100px !important;
+    height: 100px !important;
+}

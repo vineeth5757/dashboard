@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Sensor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="plant-image">
+            <img src="plant.jpeg" alt="Plant Image">
+        </div>
+        <div class="sensors">
+            <div class="sensor">
+                <img src="light_intensity.jpeg" alt="Light Intensity">
+                <label for="lightMeter">Light Intensity:</label>
+                <meter id="lightMeter" min="0" max="1000"></meter>
+                <span id="lightMeterValue"></span>
+            </div>
+            <div class="sensor">
+                <img src="humidity.jpeg" alt="Humidity">
+                <label for="humidityMeter">Humidity:</label>
+                <meter id="humidityMeter" min="0" max="100"></meter>
+                <span id="humidityMeterValue"></span>%
+            </div>
+            <div class="sensor">
+                <img src="temperature.jpeg" alt="Temperature">
+                <label for="temperatureMeter">Temperature:</label>
+                <meter id="temperatureMeter" min="-10" max="50"></meter>
+                <span id="temperatureMeterValue"></span>°C
+            </div>
+            <div class="sensor">
+                <img src="leaf_wetness.jpeg" alt="Leaf Wetness">
+                <label for="leafWetnessMeter">Leaf Wetness:</label>
+                <meter id="leafWetnessMeter" min="0" max="100"></meter>
+                <span id="leafWetnessMeterValue"></span>%
+            </div>
+            <div class="sensor">
+                <img src="soil.jpeg" alt="Soil Moisture Top">
+                <label for="soilMoistureTopMeter">Soil Moisture Top:</label>
+                <meter id="soilMoistureTopMeter" min="0" max="100"></meter>
+                <span id="soilMoistureTopMeterValue"></span>%
+            </div>
+            <div class="sensor">
+                <img src="soil.jpeg" alt="Soil Moisture Middle">
+                <label for="soilMoistureMiddleMeter">Soil Moisture Middle:</label>
+                <meter id="soilMoistureMiddleMeter" min="0" max="100"></meter>
+                <span id="soilMoistureMiddleMeterValue"></span>%
+            </div>
+            <div class="sensor">
+                <img src="soil.jpeg" alt="Soil Moisture Bottom">
+                <label for="soilMoistureBottomMeter">Soil Moisture Bottom:</label>
+                <meter id="soilMoistureBottomMeter" min="0" max="100"></meter>
+                <span id="soilMoistureBottomMeterValue"></span>%
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
