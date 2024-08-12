@@ -1,24 +1,18 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDnn3kkfrVD71xLl0lg-EFZepEdxHL8Aig",
-  authDomain: "gsma7670c.firebaseapp.com",
-  databaseURL: "https://gsma7670c-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "gsma7670c",
-  storageBucket: "gsma7670c.appspot.com",
-  messagingSenderId: "351373262732",
-  appId: "1:351373262732:web:2c308099230251131320a9",
-  measurementId: "G-45B69FTJWH"
-};
+    apiKey: "AIzaSyDnn3kkfrVD71xLl0lg-EFZepEdxHL8Aig",
+    authDomain: "gsma7670c.firebaseapp.com",
+    databaseURL: "https://gsma7670c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "gsma7670c",
+    storageBucket: "gsma7670c.appspot.com",
+    messagingSenderId: "351373262732",
+    appId: "1:351373262732:web:2c308099230251131320a9",
+    measurementId: "G-45B69FTJWH"
+  };
 
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
@@ -27,8 +21,8 @@ const database = firebase.database();
 const sensorRef = database.ref('VER1');
 
 // Fetch the sensor data and update the meter elements with the last record
-sensorRef.orderByKey().limitToLast(1).on('child_added', (snapshot) => {
-    const data = snapshot.val();
+sensorRef.on('child_added', (snapshot) => {
+  const data = snapshot.val();
     
     if (data) {
         // Update the meters with the latest sensor values
